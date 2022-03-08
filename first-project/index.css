@@ -1,0 +1,87 @@
+ body{
+  
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: #010101;
+ }
+ h2{
+     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+     background-image: linear-gradient(90deg,#000,#fefefe,#0000);
+     background-size: 80% 100%;
+     background-repeat: no-repeat;
+     background-clip: text;
+     -webkit-background-clip: text;
+     color: transparent;
+     text-transform: uppercase;
+     animation:shine 4s linear infinite;
+ }
+ @keyframes shine{
+     from{
+         background-position: -500% 0;
+     }
+     to{
+         background-position: 500% 0;
+     }
+ }
+
+.text span{
+    display: inline-block;
+    color:whitesmoke;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 900;
+    font-size: 72px;
+    animation: bounce 1.5s ease-in-out infinite;
+    animation-delay: var(--delay);
+    height: 300px;
+}
+
+.text span:not(:last-child){
+    margin-right: -2px;
+}
+@keyframes bounce{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap");
+
+
+.pulse{
+  stroke-dasharray:1840;
+  stroke-dashoffset:3680;
+  animation:dash 2s ease-out infinite;
+  stroke:url(#strokeGradient);
+}
+
+@keyframes dash{
+  to{
+    stroke-dashoffset:0;
+  }
+}
+
+.loader span{
+  color:#eee;
+  display:block;
+  text-align:center;
+  font-size:35px;
+  margin-top:15px;
+  animation:blink 900ms linear infinite alternate;
+}
+
+@keyframes blink{
+  from{
+    opacity:0;
+  }
+  
+  to{
+    opacity:1;
+  }
+} 
